@@ -1,0 +1,297 @@
+/* ===== GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #b8e7f5, #ffffff);
+  color: #002b3d;
+  overflow-x: hidden;
+}
+
+hr{
+  margin-bottom: 15px;
+}
+
+/* ===== MENU ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 16, 32, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: #00d8ff;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00d8ff;
+}
+
+/* ===== BANNER ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  color: #001020;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  backdrop-filter: blur(3px);
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* ===== QUADRO PADRÃO ===== */
+.quadro {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  width: 85%;
+  min-height: 60vh;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.quadro h2 {
+  font-size: 2.8rem;
+  color: #001020;
+  margin-bottom: 20px;
+}
+
+/* ===== QUADRO LARGO (Sessão 6) ===== */
+.quadro-largo {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 100%;
+  min-height: 60vh;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.quadro-largo h2 {
+  font-size: 2.8rem;
+  color: #001020;
+  margin-bottom: 20px;
+}
+
+/* ===== HISTÓRICO ===== */
+.conteudo-historico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.conteudo-historico img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.conteudo-historico p {
+  flex: 1;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #002b3d;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* ===== SESSÃO 4 - TECNOLOGIAS AQUÁTICAS ===== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #004466;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #00334d;
+  line-height: 1.5;
+}
+
+/* ===== SESSÃO 5 - INOVAÇÕES FUTURAS ===== */
+#futuro {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  width: 85%;
+  min-height: 60vh;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+#futuro .parte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+#futuro .parte img {
+  width: 560px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#futuro .texto {
+  flex: 1;
+}
+
+#futuro .texto h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #001020;
+  text-align: left;
+}
+
+#futuro .texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #00334d;
+}
+
+@media (max-width: 900px) {
+  #futuro .parte {
+    flex-direction: column;
+    text-align: center;
+  }
+  #futuro .parte img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* ===== SESSÃO 7 - JOGO ===== */
+.iframe-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 56.25%; /* proporção 16:9 */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.descricao-jogo {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #00334d;
+  text-align: center;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background: #001020;
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer span {
+  color: #00d8ff;
+  font-weight: bold;
+}
